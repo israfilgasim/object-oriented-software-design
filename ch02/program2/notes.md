@@ -1,3 +1,0 @@
-Member function `find()` becomes much simpler (listing 2.8). The function *delegates* attribute matching to class `Attributes` by calling the latter’s `is_match()` member function, and thus `find()` is no longer affected by any changes to book attributes.
-
-Class `Catalogue` is now *loosely coupled* with class `Attributes` because we’ve minimized the dependences of `Catalogue` on `Attributes`. Class `Catalogue` doesn’t know the specific attributes that class `Attributes` maintains. Classes `Book` and `Attributes` are also loosely coupled with each other: class `Attributes` doesn’t know that its objects are stored by `Book` objects, and class `Book` also doesn’t need to know how class `Attributes` is implemented.
